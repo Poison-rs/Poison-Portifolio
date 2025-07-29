@@ -6,6 +6,7 @@
 
 :root {
     --brand-color: #fc1316;
+    --text-secondary: #b0b0b0;
 }
 
 body {
@@ -101,6 +102,7 @@ main {
         flex-direction: column;
         justify-self: center;
         align-items: center;
+        margin-bottom: 5.5rem;
 
         & h1 {
             font-size: 3.5rem;
@@ -118,8 +120,53 @@ main {
            text-decoration: underline;
         }
     }
+}
 
+.projects-container {
+    display: grid;
+    gap: 2rem;
 
+    & .image-wrapper {
+        display: flex;
+        gap: 3rem;
+
+        & img {
+            width: 40rem;
+            border-radius: 1rem;
+
+            &:hover {
+                animation: scale 0.6s ease both;
+            }
+        }
+
+        & .text-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        & h2 {
+            font-size: 3rem;
+            font-family: "Nunito", sans-serif;
+            font-weight: 800;
+        }
+
+        & h3 {
+            color: var(--brand-color);
+            text-transform: uppercase;
+        }
+
+        & p {
+            color: var(--text-secondary);
+        }
+
+        & a:hover  {
+            color: var(--brand-color);
+            text-shadow: 0 0 15px rgba(250,17,20,255);
+            transition: 0.3s;
+        }
+        
+    }
 }
 
 .container {
@@ -148,6 +195,10 @@ main {
         background-color: var(--brand-color);
         box-shadow: 0 0 25px rgba(250,17,20,255);
     }
+}
+
+.display-none {
+    display: none;
 }
 
 @keyframes blinking {
@@ -181,5 +232,11 @@ main {
 @keyframes blink {
     100% {
         border-right: 3px solid var(--brand-color);
+    }
+}
+
+@keyframes scale {
+    to {
+        scale: 1.02;
     }
 }
