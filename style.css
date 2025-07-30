@@ -51,6 +51,8 @@ header nav {
 }
 
 main {
+    justify-content: center;
+
     & .logo-img img {
         width: 20rem;
         aspect-ratio: 1/1;
@@ -127,7 +129,10 @@ main {
     gap: 2rem;
 
     & .image-wrapper {
+        position: relative;
+        max-width: 80rem;
         display: flex;
+        justify-self: center;
         gap: 3rem;
 
         & img {
@@ -154,13 +159,18 @@ main {
         & h3 {
             color: var(--brand-color);
             text-transform: uppercase;
+
+            &.beta-dev {
+                color: white;
+                text-decoration: underline 3px;
+            }
         }
 
         & p {
             color: var(--text-secondary);
         }
 
-        & a:hover  {
+        & a.git-msg:hover  {
             color: var(--brand-color);
             text-shadow: 0 0 15px rgba(250,17,20,255);
             transition: 0.3s;
@@ -201,6 +211,12 @@ main {
     display: none;
 }
 
+.beta-dev {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
 @keyframes blinking {
     0% {
         box-shadow: 0 0 10px rgba(250,17,20,255);
@@ -238,5 +254,148 @@ main {
 @keyframes scale {
     to {
         scale: 1.02;
+    }
+}
+
+@media (width <= 26.875em) {
+    header {
+
+        
+        & nav {
+            padding: .5rem 1rem; 
+        }
+
+        .nav-links {
+            & a{
+                font-size: .875rem; 
+    
+                & .active {
+                    border-bottom-width: 1px;
+                }
+
+                &.home {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .about-container {
+        all: unset;
+
+        & .logo-img {
+            display: flex;
+            justify-content: center;
+            padding-block: 2rem;
+        }
+
+        & .about-text {
+            justify-content: center;
+            padding-inline: 2rem;
+
+            & h1 {
+                font-size: 2.5rem;
+            }
+
+            & h3 {
+                font-size: 1.75rem;
+            }
+        }
+
+        & .about-links {
+            padding-inline: 2rem;
+            margin-bottom: 2rem;
+            gap: 4rem;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .projects-container{
+        gap: 3rem;
+
+        & .image-wrapper {
+            flex-direction: column;
+            gap: .5rem;
+            
+            & img {
+                width: 100%;
+
+            }
+
+            & h2 {
+                font-size: 2rem;
+            }
+        }
+
+        & .text-wrapper {
+            gap: 1.5rem;
+        }
+    }
+
+    .break-desktop {
+        display: none;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .beta-dev {
+        display: none;
+    }
+}
+
+@media (width <= 24.5625em) {
+    main {
+        & .projects-title {
+            & h1 {
+                font-size: 3rem;
+            }
+
+            & p {
+                text-align: center ;
+            }
+        }
+    }
+}
+
+@media (width <= 21.5em) {
+    header nav {
+        & > a {
+            font-size: .875rem;
+        }
+
+        & .nav-links a {
+            margin-left: .75rem;
+            font-size: .75rem;
+        }
+    }    
+
+    main {
+        & .projects-title {
+            & h1 {
+                font-size: 2.5rem;
+            }
+
+            & p {
+                font-size: .875rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .projects-container {
+        & .image-wrapper{
+            & h2 {
+                font-size: 1.875rem;
+            }
+        }
+        
+    }
+
+    .container {
+        padding: 1rem;
+        padding-bottom: 2rem;
     }
 }
