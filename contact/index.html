@@ -24,5 +24,40 @@
             </div>
         </nav>
     </header>
+
+    <main class="container contact-container">
+        <div class="contact-content">
+            <div class="contact-text">
+                <h1>Contact Me!</h1>
+                <p>If you have any questions about my projects or me, feel free to reach out!</p>
+            </div>
+            <form action="#" method="get">
+                <div class="input-wrapper">
+                    <div class="inner-input">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <div class="error-message">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Fill the field above!</span>
+                        </div>
+                    </div>
+                    <div class="inner-input">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <div class="error-message">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Fill the field above!</span>
+                        </div>
+                    </div>
+                    <div class="inner-input">
+                        <textarea name="message" rows="10" placeholder="Your Message" required></textarea>
+                        <div class="error-message">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Fill the field above!</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-secondary">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
