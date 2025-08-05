@@ -494,6 +494,22 @@ main {
     }
 }
 
+@media (width <= 25.875em) {
+    .about-container {
+            & .about-text { 
+                & h1 {
+                    font-size: 2.25rem;
+                }
+            }
+        }
+
+    .contact-container {
+        & h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
 @media (width <= 24.5625em) {
     main {
         & .projects-title {
@@ -504,7 +520,7 @@ main {
             & p {
                 text-align: center ;
             }
-        }
+        }    
     }
 
     .about-container {
@@ -536,6 +552,12 @@ main {
             h2 {
                 font-size: 1.75rem;
             }
+        }
+    }
+
+    .contact-container {
+        h1 {
+            font-size: 2.5rem;
         }
     }
 }
